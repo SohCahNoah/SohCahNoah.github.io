@@ -1,0 +1,17 @@
+:root { --maxw: 900px; --fg:#0b0b0e; --muted:#5b5b66; --link:#0066cc; }
+* { box-sizing: border-box; }
+body { font-family: system-ui, Segoe UI, Roboto, Ubuntu, Cantarell, sans-serif; margin: 0; color: var(--fg); line-height: 1.6; }
+header { padding: 2.5rem 1rem; border-bottom: 1px solid #eee; }
+header h1 { margin: 0 0 .25rem; font-size: 2rem; }
+header p { margin: 0 0 1rem; color: var(--muted); }
+nav a { margin-right: .75rem; text-decoration: none; color: var(--link); }
+section, footer { max-width: var(--maxw); margin: 0 auto; padding: 1.5rem 1rem; }
+h2 { margin-top: 0; }
+article { padding: 1rem; border: 1px solid #eee; border-radius: 12px; margin: .75rem 0; }
+article h3 { margin: 0 0 .25rem; }
+@media (prefers-color-scheme: dark) {
+  body { background:#0b0b0e; color:#e9e9ee; }
+  header { border-color: #222; }
+  article { border-color:#222; }
+  a { color:#7ab6ff; }
+}

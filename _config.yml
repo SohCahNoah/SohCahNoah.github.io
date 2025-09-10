@@ -1,5 +1,5 @@
 title: "Noah Roberts"
-description: "Systems & Tools -- Python/C/C++ -- Linux -- Game/Graphics"
+description: "Systems & Tools - Python/C/C++ - Linux - Game/Graphics"
 url: "https://SohCahNoah.github.io"
 baseurl: ""
 theme: minima
@@ -13,6 +13,7 @@ header_pages:
   - about.md
 
 minima:
+  hide_site_feed_link: true
   social_links:
     github: SohCahNoah
     linkedin: TO BE IMPLEMENTED

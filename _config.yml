@@ -1,0 +1,30 @@
+title: "Noah Roberts"
+description: "Systems & Tools -- Python/C/C++ -- Linux -- Game/Graphics"
+url: "https://SohCahNoah.github.io"
+baseurl: ""
+theme: minima
+
+timezone: America/Los_Angeles
+markdown: kramdown
+permalink: /:categories/:year/:month/:day/:title/
+
+header_pages:
+  - projects.md
+  - about.md
+
+minima:
+  social_links:
+    github: SohCahNoah
+    linkedin: TO BE IMPLEMENTED
+
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+
+sass:
+  style: compressed
+
+exlude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock

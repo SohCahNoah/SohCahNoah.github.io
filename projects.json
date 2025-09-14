@@ -27,5 +27,15 @@
     "demo_url": null,
     "tags": ["C", "ncurses", "CLI"],
     "tech": ["C", "ncurses", "CLI"]
+  },
+
+  {
+    "title": "Electrical Arc Speaker (Custom PCB)",
+    "description": "A PCB used in the Electrical Arc Speaker (EAS) designed for my Senior Capstone at Oregon State University. System injects an audio-input into a carrier signal, and then uses a flyback transformer from a CRT to step-up the signal voltage by several orders of magnitude. The result is an electrical arc across the anode and cathode of the CRT that audibly outputs the injected sound. Project partners for this were Owen Vita and Bader Alenesi.",
+    "image": "/images/EASPCB_example.png",
+    "repo_url": "https://github.com/SohCahNoah/EAS_PCB",
+    "demo_url":null,
+    "tags":["KiCad", "PCB", "High Voltage", "Signal Processing"],
+    "tech":["KiCad"]
   }
 ]

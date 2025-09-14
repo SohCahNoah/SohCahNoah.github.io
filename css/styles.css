@@ -199,3 +199,33 @@ body {
 }
 
 .muted { color: var(--muted); }
+
+/* Headshot beside About text */
+.about-bio {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 20px;
+  align-items: start;
+}
+
+.about-headshot {
+  width: 160px;
+  height: 160px;
+  border-radius: 9999px;   /* circle */
+  object-fit: cover;
+  background: #0f0f12;     /* fallback */
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+}
+
+/* Mobile tweak */
+@media (max-width: 640px) {
+  .about-bio {
+    grid-template-columns: 88px 1fr;
+    gap: 14px;
+  }
+  .about-headshot {
+    width: 88px;
+    height: 88px;
+  }
+}

@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Noah Roberts • Portfolio</title>
+  <meta name="description" content="Systems & Tools - Python/C/C++ - Linux - Game/Graphics" />
+  <link rel="preload" href="/fonts/inter-regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/inter-semibold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="icon" href="/images/favicon.png" />
+  <link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body>
+  <!-- Top Nav -->
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="#top">
+        <img src="/images/logo.png" alt="Logo" class="brand-logo" />
+        <span class="brand-text">SohCahNoah</span>
+      </a>
+
+      <nav class="nav-links" aria-label="Primary">
+        <a href="#projects">Projects</a>
+        <a href="#about">About</a>
+        <a href="#contact" class="btn btn--ghost">Contact</a>
+      </nav>
+
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="top" class="hero">
+    <div class="container hero-inner">
+      <h1 class="hero-title">Open-source tools and projects</h1>
+      <p class="hero-tagline">Python, C/C++, Linux, Game/Graphics</p>
+
+      <div class="search">
+        <input id="projectSearch" type="search" placeholder="Search projects… ('Pygame', 'API', etc)" aria-label="Search projects">
+      </div>
+
+      <div class="hero-links">
+        <a href="#projects" class="btn btn--primary">Browse Projects</a>
+        <a href="https://github.com/SohCahNoah" class="btn btn--ghost" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+    <div class="hero-fade"></div>
+  </section>
+
+  <!-- All Projects (JSON-driven) -->
+  <section class="section" id="projects">
+    <div class="container">
+      <h2 class="section-title">Projects</h2>
+      <div class="grid" id="projectGrid" aria-live="polite"></div>
+      <div id="projectStatus" class="muted" style="margin-top:12px;"></div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="section section--alt" id="about">
+    <div class="container">
+      <h2 class="section-title">About</h2>
+      <div class="about-grid">
+        <div>
+          <p>I build tools and systems across Python/C/C++, Linux, and game/graphics. I like clean code, fast UIs, and strong pipelines.</p>
+          <p>Focus areas: data tooling, low-level utilities, graphics math, and documentation systems.</p>
+        </div>
+        <ul class="about-list">
+          <li>Linux Mint (PipeWire/OBS/Discord routing)</li>
+          <li>PySide6, PIL, NumPy</li>
+          <li>ncurses, Make, vcpkg</li>
+          <li>MediaWiki TemplateStyles</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="section" id="contact">
+    <div class="container">
+      <h2 class="section-title">Contact</h2>
+      <div class="contact">
+        <a class="btn btn--primary" href="mailto:noah@yourdomain.tld">Email</a>
+        <a class="btn btn--ghost" href="https://github.com/SohCahNoah" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn btn--ghost" href="https://www.linkedin.com/in/your-handle" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Noah Roberts</p>
+      <a href="#top" class="back-to-top" aria-label="Back to top">↑</a>
+    </div>
+  </footer>
+
+  <script src="/js/main.js" defer></script>
+</body>
+</html>

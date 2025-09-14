@@ -1,0 +1,31 @@
+[
+  {
+    "title": "Py3D",
+    "description": "First foray into 3D engine experiments (vectors, matrices, quaternions) using Python.",
+    "image": "/images/py3d_example.png",
+    "repo_url": "https://github.com/SohCahNoah/Py3D",
+    "demo_url": null,
+    "tags": ["Python", "Math", "Graphics", "3D"],
+    "tech": ["Python", "NumPy"]
+  },
+
+  {
+    "title": "FunGame",
+    "description": "A simple, custom framework for a game or other UI-system, using class abstraction to create a modular and flexible UI",
+    "image": "/images/FunGame_example2.png",
+    "repo_url": "https://github.com/SohCahNoah/FunGame",
+    "demo_url": null,
+    "tags": ["Python", "PyGame", "UI"],
+    "tech": ["Python", "PyGame", "NumPy"]
+  },
+
+  {
+    "title": "CCLK",
+    "description": "A terminal utility built using ncurses. Displays current time in terminal with execution flags for different outputs and formats",
+    "image": "/images/cclk_example.png",
+    "repo_url": "https://github.com/SohCahNoah/cclk",
+    "demo_url": null,
+    "tags": ["C", "ncurses", "CLI"],
+    "tech": ["C", "ncurses", "CLI"]
+  }
+]

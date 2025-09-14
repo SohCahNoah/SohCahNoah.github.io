@@ -33,9 +33,20 @@
     "title": "Electrical Arc Speaker (Custom PCB)",
     "description": "A PCB used in the Electrical Arc Speaker (EAS) designed for my Senior Capstone at Oregon State University. System injects an audio-input into a carrier signal, and then uses a flyback transformer from a CRT to step-up the signal voltage by several orders of magnitude. The result is an electrical arc across the anode and cathode of the CRT that audibly outputs the injected sound. Project partners for this were Owen Vita and Bader Alenesi.",
     "image": "/images/EASPCB_example.png",
-    "repo_url": "https://github.com/SohCahNoah/EAS_PCB",
+    "repo_url": "https://projects.engineering.oregonstate.edu/projects/?id=g7sKltnyUnjuAULF",
     "demo_url":null,
     "tags":["KiCad", "PCB", "High Voltage", "Signal Processing"],
     "tech":["KiCad"]
+  },
+
+  {
+    "title": "ZipCodeSearch",
+    "description": "A program that takes in a user-submitted zip code, checks against a list of 'depot' locations, and then spits out the closest depot, as well as the by-the-road mileage. Project uses OpenRouteService's API for distance mapping",
+    "image": "/images/ZipCodeSearch_example.png",
+    "repo_url": "https://github.com/SohCahNoah/ZipCodeSearch",
+    "demo_url": null,
+    "tags":["OpenRouteService", "API", "GUI", "SciPy"],
+    "tech":["OpenRouteService", "requests", "SciPy"]
+
   }
 ]

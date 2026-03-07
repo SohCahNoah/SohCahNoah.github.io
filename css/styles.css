@@ -186,8 +186,25 @@ body {
 .about-list { margin: 0; padding-left: 1rem; }
 
 /* Footer */
-.site-footer { border-top: 1px solid var(--line); padding: 18px 0 28px; margin-top: 24px; }
-.footer-inner { display: flex; align-items: center; justify-content: space-between; }
+.site-footer {
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+.site-footer a,
+.site-footer a:visited {
+  color: inherit;
+  text-decoration: none;
+}
+
+.footer-inner {
+  min-height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  color: var(--muted);
+}
+
 .back-to-top { 
   --size: 40px;
   display: inline-flex;

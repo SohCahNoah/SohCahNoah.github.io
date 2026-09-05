@@ -98,3 +98,47 @@ document.addEventListener('DOMContentLoaded', () => {
   setYear();
   loadProjects();
 });
+
+document.querySelectorAll('.gallery-slideshow').forEach((slideshow) => {
+  const slides = Array.from(
+    slideshow.querySelectorAll('.gallery-slide')
+  );
+
+  const dotsWrap = slideshow.querySelector('.gallery-dots');
+
+  // No controls needed for a single image
+  if (slides.length <= 1) {
+    dotsWrap.remove();
+    return;
+  }
+
+  let currentSlide = 0;
+
+  slides.forEach((_, index) => {
+    const btn = document.createElement('button');
+
+    btn.className = 'dot' + (index === 0 ? ' is-active' : '');
+    btn.type = 'button';
+    btn.setAttribute('aria-label', `Go to image ${index + 1}`);
+
+    btn.addEventListener('click', () => {
+      showGallerySlide(index);
+    });
+
+    dotsWrap.appendChild(btn);
+  });
+
+  const dots = Array.from(
+    dotsWrap.querySelectorAll('.dot')
+  );
+
+  function showGallerySlide(index) {
+    slides[currentSlide].classList.remove('is-active');
+    dots[currentSlide].classList.remove('is-active');
+
+    currentSlide = index;
+
+    slides[currentSlide].classList.add('is-active');
+    dots[currentSlide].classList.add('is-active');
+  }
+});

@@ -1,6 +1,6 @@
 :root {
   --bg: #0b0f14;
-  --panel: rgba(10, 14, 20, 0.58);
+  --panel: rgba(10, 14, 20, 0.82);
   --panel-strong: rgba(10, 14, 20, 0.82);
   --text: #f5f7fa;
   --muted: #c2c9d1;
@@ -13,7 +13,10 @@
 }
 
 * { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--header-h) + 1rem);
+}
 
 body {
   margin: 0;
@@ -117,7 +120,7 @@ a { color: inherit; text-decoration: none; }
   min-height: 100svh;
   display: grid;
   align-items: center;
-  overflow: hidden;
+  overflow: clip;
   isolation: isolate;
 }
 
@@ -143,7 +146,6 @@ a { color: inherit; text-decoration: none; }
 
 .slide.is-active {
   opacity: 1;
-  animation: heroZoom 6s ease-in-out forwards;
 }
 
 @keyframes heroZoom {
@@ -185,7 +187,7 @@ a { color: inherit; text-decoration: none; }
   padding: 1.5rem;
   border-radius: var(--radius);
   background: var(--panel);
-  border: 1px solid rgba(255,255,255,0.10);
+  border: 1px solid rgba(255,255,255,0.25);
   box-shadow: var(--shadow);
   backdrop-filter: blur(6px);
 }
@@ -213,9 +215,9 @@ a { color: inherit; text-decoration: none; }
 
 .hero-tagline {
   margin: 0.5;
-  max-width: 60ch;
   font-size: clamp(1rem, 1.8vw, 1.22rem);
   color: var(--muted);
+  padding-bottom: 1rem;
 }
 
 .hero-links {
@@ -228,7 +230,7 @@ a { color: inherit; text-decoration: none; }
 .hero-quicklinks {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 1rem;
   margin-top: 1rem;
 }
@@ -238,7 +240,7 @@ a { color: inherit; text-decoration: none; }
   padding: 1rem;
   border-radius: var(--radius);
   background: var(--panel);
-  border: 1px solid rgba(255,255,255,0.10);
+  border: 1px solid rgba(255,255,255,0.25);
   box-shadow: var(--shadow);
   backdrop-filter: blur(6px);
 }
@@ -251,13 +253,15 @@ a { color: inherit; text-decoration: none; }
 
 .quick-card h3 {
   margin: 0 0 0.4rem;
-  font-size: 1rem;
+  font-size: 1.5rem;
+  text-align: center;
+  padding-bottom: 0.5rem;
 }
 
 .quick-card p {
   margin: 0;
   color: var(--muted);
-  font-size: 0.95rem;
+  font-size: 1rem;
 }
 
 .hero-dots {
@@ -265,6 +269,7 @@ a { color: inherit; text-decoration: none; }
   gap: 0.75rem;
   align-items: center;
   margin-top: 1rem;
+  justify-content: center;
 }
 
 .dot {
@@ -272,7 +277,7 @@ a { color: inherit; text-decoration: none; }
   height: 11px;
   border-radius: 999px;
   background: rgba(255,255,255,0.34);
-  border: 0;
+  border: 1px solid white;
   padding: 0;
   cursor: pointer;
 }
@@ -392,4 +397,106 @@ a { color: inherit; text-decoration: none; }
   }
 
   .nav-links.is-open { display: flex; }
+}
+
+.cert-grid {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  margin-top: 24px;
+  flex-wrap: wrap;
+}
+
+.cert-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 220px;
+}
+
+.cert-logo {
+  width: 160px;
+  height: 100px;
+  object-fit: contain;
+  margin-bottom: 12px;
+}
+
+.cert-caption {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+.service-highlight {
+  padding-bottom: 0.75rem;
+  text-align: left;
+}
+
+.hero-card-separator {
+  height: 1.5px;
+  background: rgba(255,255,255,0.18);
+  margin: 1rem 2rem;
+}
+
+.centered-work {
+  text-align: center;
+}
+
+#gallery .grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+@media (max-width: 900px) {
+  #gallery .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  #gallery .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.gallery-image-wrap {
+  position: relative;
+}
+
+.gallery-slide {
+  display: none;
+}
+
+.gallery-slide.is-active {
+  display: block;
+}
+
+.gallery-dots {
+  position: absolute;
+  left: 50%;
+  bottom: 12px;
+  transform: translateX(-50%);
+
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.gallery-card--downloadable {
+  position: relative;
+  cursor: pointer;
+}
+
+.gallery-card-download {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+/* Keep slideshow dots above the download overlay */
+.gallery-card--downloadable .gallery-dots {
+  z-index: 2;
 }
